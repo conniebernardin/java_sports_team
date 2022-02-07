@@ -10,7 +10,7 @@ public class Team {
     private Manager manager;
 
     //constructor
-    public void Team(String name, Manager manager){
+    public Team(String name, Manager manager){
         this.name = name;
         this.manager = manager;
         this.players = new Player[15]; //don't need to pass players as parameter because teams don't always start with players in them
@@ -18,6 +18,33 @@ public class Team {
     //default constructor
     public Team(){
     }
+
+    //getters and setters
+
+    public Player[] getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(Player[] players) {
+        this.players = players;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Manager getManager() {
+        return manager;
+    }
+
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
+
 
     @Override
     public String
