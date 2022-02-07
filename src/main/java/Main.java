@@ -11,8 +11,15 @@ public class Main {
         Manager manager = new Manager("Gregor Townsend");
         Team scotland =  new Team("Scotland", manager);
 
+        //calling count empty spaces method on Scotland team
         TeamService teamService = new TeamService();
-        int spaces = teamService.countEmptySpacesInTeam(scotland);
-        System.out.println(spaces);
+        int spacesBefore = teamService.countEmptySpacesInTeam(scotland);
+        System.out.println(spacesBefore);
+
+
+        teamService.addPlayerToTeam(scotland, player);
+
+        int spacesAfter = teamService.countEmptySpacesInTeam(scotland);
+        System.out.println(spacesAfter);
     }
 }
