@@ -17,6 +17,12 @@ public class TeamService {
                 /* could also use:
                  count += 1;
                  count = count + 1; */
+
+        //alternative loop using i index
+//        Player players [] = team.getPlayers();
+//           for (int i =0; i < players.length; i ++){
+//               if (players[i] == null){
+//                   counter ++;
             }
         }
         return counter;
