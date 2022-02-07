@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Player player = new Player("Fin Russell", "Fly Half", 10, 12);
+        Player Fin = new Player("Fin Russell", "Fly Half", 10, 12);
         Manager manager = new Manager("Gregor Townsend");
         Team scotland =  new Team("Scotland", manager);
 
@@ -17,7 +17,11 @@ public class Main {
         System.out.println(spacesBefore);
 
 
-        teamService.addPlayerToTeam(scotland, player);
+        try {
+            teamService.addPlayerToTeam(scotland, Fin);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         int spacesAfter = teamService.countEmptySpacesInTeam(scotland);
         System.out.println(spacesAfter);
